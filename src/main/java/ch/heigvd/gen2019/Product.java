@@ -1,7 +1,7 @@
 package ch.heigvd.gen2019;
 
 public class Product {
-   
+
     private String code;
     private Color color;
     private Size size;
@@ -36,5 +36,13 @@ public class Product {
         return currency;
     }
 
-
+    @Override
+    public String toString(){
+        String s= "{\"code\": \""+getCode()+"\", \"color\": \""+getColor()+"\", ";
+        if (getSize() != null) {
+            s=s.concat("\"size\": \""+getSize()+"\", ");
+        }
+        s= s.concat("\"price\": "+ getPrice()+", \"currency\": \""+getCurrency()+"\"}, ");
+        return s;
+    }
 }
