@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private List<ch.heigvd.gen2019.Product> products = new ArrayList<ch.heigvd.gen2019.Product>();
+    private List<Product> products = new ArrayList<Product>();
     private int id;
 
     public Order(int id) {

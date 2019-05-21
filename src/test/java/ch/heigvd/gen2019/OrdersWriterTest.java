@@ -12,7 +12,7 @@ public class OrdersWriterTest {
     public void SetupOneOrder() {
         orders.AddOrder(order111);
     }
- 
+    
     @Test
     public void NoOrder() {
         assertEquals("{\"orders\": []}", new OrdersWriter(new Orders()).getContents());
