@@ -42,7 +42,7 @@ public class Product {
         if (getSize() != null) {
             s=s.concat("\"size\": \""+getSize()+"\", ");
         }
-        s= s.concat("\"price\": "+ getPrice()+", \"currency\": \""+getCurrency()+"\"}, ");
+        s= s.concat("\"price\": "+ getPrice()+", \"currency\": \""+getCurrency()+"\"}");
         return s;
     }
 }

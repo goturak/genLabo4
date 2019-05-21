@@ -20,6 +20,7 @@ public class OrdersWriter {
             for (int j = 0; j < order.getProductsCount(); j++) {
                 Product product = order.getProduct(j);
                 sb.append(product);
+                sb.append(", ");
             }
 
             if (order.getProductsCount() > 0) {
