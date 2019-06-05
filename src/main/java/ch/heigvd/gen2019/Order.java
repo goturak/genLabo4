@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private List<ch.heigvd.gen2019.Product> products = new ArrayList<ch.heigvd.gen2019.Product>();
+    private List<Product> products = new ArrayList<Product>();
     private int id;
 
     public Order(int id) {
@@ -25,5 +25,27 @@ public class Order {
 
     public void AddProduct(Product product) {
         products.add(product);
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append("{");
+        sb.append("\"id\": ");
+        sb.append(getOrderId());
+        sb.append(", ");
+        sb.append("\"products\": [");
+        for (int j = 0; j < getProductsCount(); j++) {
+
+            sb.append(getProduct(j));
+            sb.append(", ");
+        }
+
+        if (getProductsCount() > 0) {
+            sb.delete(sb.length() - 2, sb.length());
+        }
+
+        sb.append("]");
+        return sb.toString();
     }
 }
